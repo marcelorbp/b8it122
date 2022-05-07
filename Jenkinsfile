@@ -20,5 +20,11 @@ pipeline {
                echo 'Deploy...'
             }
         }
+        stage('Monitor') { 
+            steps {
+                // 
+               echo 'Monitor...'
+            }
+        }
     }
 }
