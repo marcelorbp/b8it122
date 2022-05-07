@@ -9,7 +9,7 @@ pipeline {
     stages{
         stage('Checkout'){
             steps{
-                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [url: 'https://github.com/marcelorbp/b8it122.git']])
+                 git changelog: false, poll: false, url: 'https://github.com/marcelorbp/b8it122.git'
             }
         }
         stage('Build') { 
